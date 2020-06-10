@@ -60,16 +60,35 @@
   height: calc( 100vh - 150px - 50px ) ;
   display: flex;
   &__left{
+    &__create{
+      border: 2px solid;
+      border-color: blue;
+      text-align: center;
+      a{
+        color: navy;
+        text-decoration: none;
+        .icon{
+          color: navy;
+        }
+      }
+    }
     border: 1px solid;
     border-color: navy;
     width: 250px;
     color: navy;
-    font-size: 25px;
-    font-weight: bold;
     padding: 15px;
     overflow: auto;
     &__team-list {
       margin: 30px 0;
+      font-size: 25px;
+      font-weight: bold;
+      a{
+        color: navy;
+        text-decoration: none;
+      }
+      a:active{
+        color : #26a69a;
+      }
     }
   }
   &__center{

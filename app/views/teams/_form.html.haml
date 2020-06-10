@@ -1,0 +1,43 @@
+= form_with team do |f|
+  - if team.errors.any?
+    .sales-team-form__errors
+      %h2= "#{team.errors.full_messages.count}件のエラーが発生しました。"
+      %ul
+        - team.errors.full_messages.each do |message|
+          %li= message
+  .sales-team-form__field
+    .sales-team-form__field--left
+      = f.label :name, class: 'sales-team-form__label'
+    .sales-team-form__field--right
+      = f.text_field :name, class: 'sales__team_name sales-team-form__input', placeholder: 'チーム名を入力してください'
+  .sales-team-form__field.clearfix
+    .sales-team-form__field--left
+      %label.sales-team-form__label{:for => "sales_team_チームメンバーを追加"} チームメンバーを追加
+    .sales-team-form__field--right
+      .sales-team-form__search.clearfix
+        %input#user-search-field.sales-team-form__input{:placeholder => "追加したいメンバーを入力してください", :type => "text"}/
+      #user-search-result
+
+  .sales-team-form__field.clearfix
+    .sales-team-form__field--left
+      %label.sales-team-form__label{:for => "sales_team_チームメンバー"} チームメンバー
+    .sales-team-form__field--right
+
+      #sales-team-users.js-add-user
+        .sales-team-user.clearfix.js-chat-member
+          %input{name: "team[user_ids][]", type: "hidden", value: current_user.id}
+          %p.sales-team-user__name= current_user.name
+
+        - team.users.each do |user|
+          - if current_user.name != user.name
+            .sales-team-user.clearfix.js-chat-member
+              %input{name: "team[user_ids][]", type: "hidden", value: user.id}
+              %p.sales-team-user__name
+                = user.name 
+              %a.user-search-remove.sales-team-user__btn.sales-team-user__btn--remove.js-remove-btn
+                削除
+
+  .sales-team-form__field.clearfix
+    .sales-team-form__field--left
+    .sales-team-form__field--right
+      = f.submit class: 'sales-team-form__action-btn'

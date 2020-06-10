@@ -1,0 +1,31 @@
+.report
+  .current
+    .current__name
+      担当：
+      = current_user.name
+    .current__team
+      所属：
+      中部支店
+  .company
+    .company__name
+    企業名：
+      %input(type="text" class="company-input")/
+  .proposal
+    .proposal__amount
+      提案金額
+    .propasol__input
+      %input(type="text")/
+  .proposal-content
+    提案内容
+    .proposal-content__input
+      %textarea(name="content" cols="80" rows="10")
+  .result
+    .result__amout
+      獲得金額
+    .result__input
+      %input(type="text")/
+  .result-content
+    提案内容
+    .result-content__input
+      %textarea(name="content" cols="80" rows="10")
+    

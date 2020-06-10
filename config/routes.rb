@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root "teams#index"
   resources :users, only: [:edit, :update]
   resources :teams, only: [:index, :new, :create, :edit, :update]
+  resources :reports, only: [:new, :edit]
+  
 end
