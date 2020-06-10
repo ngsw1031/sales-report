@@ -6,7 +6,7 @@
 |------|----|-------|
 |name|string|null: false|
 |password|string|null: false|
-|number|integer|null: false|
+|email|integer|null: false|
 |team_id|integer|null: false|
 |company_id|integer|null: false|
 ### users Association
