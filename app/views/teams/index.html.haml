@@ -2,7 +2,8 @@
   .header__left
     .header__left__block
       .name
-        永沢
+        = link_to edit_user_path(current_user) do
+          = current_user.name
       .create-btn
         = link_to "#" do
           レポート作成
@@ -64,6 +65,6 @@
     .result
       結果
     .result-contents
-    
-  
+.footer
+  〇〇株式会社
 
