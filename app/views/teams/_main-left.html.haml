@@ -1,0 +1,9 @@
+.main__left
+  .main__left__create
+    = link_to new_team_path(current_user) do
+      新規作成
+      = icon('fas', 'plus', class: 'icon')
+  - current_user.teams.each do |team|
+    .main__left__team-list
+      = link_to team_path(team) do
+        = team.name

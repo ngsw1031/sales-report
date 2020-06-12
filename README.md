@@ -6,14 +6,13 @@
 |------|----|-------|
 |name|string|null: false|
 |password|string|null: false|
-|number|integer|null: false|
+|email|integer|null: false|
 |team_id|integer|null: false|
 |company_id|integer|null: false|
 ### users Association
 - has_many :reports
 - has_many :comments
 - has_many :goods
-- has_many :companys
 - belongs_to :team
 
 ## teamsテーブル
@@ -23,7 +22,6 @@
 |user_id|references|null: false|
 ### teams Association
 - has_many :user
-- has_many :companys
 - has_many :reports
 
 ## reportsテーブル
@@ -36,7 +34,6 @@
 ### reports Association
 - belongs_to :user
 - belongs_to :team
-- belongs_to :company
 - has_many :comments
 - has_many :goods
 

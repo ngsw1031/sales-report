@@ -1,0 +1,9 @@
+.header__left
+  .header__left__block
+    .name
+      = link_to edit_user_path(current_user) do
+        = current_user.name
+    .create-btn
+      = link_to new_report_path(current_user) do
+        レポート作成
+        = icon('fas', 'edit', class: 'icon')

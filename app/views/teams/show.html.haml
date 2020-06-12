@@ -1,0 +1,59 @@
+.header
+  = render "header-left"
+  .header__right
+    .team
+      = @team.name
+    %ul.team-menber
+      %li.team-menber__list
+        メンバー：
+        - @team.users.each do |user|
+          = user.name
+        
+  
+.main
+  = render "main-left"
+  .main__center
+    .block
+      .block__head
+        .block__head__title
+          〇〇案件商談
+        .block__head__date
+          〇〇月〇〇日
+      .block__responsible
+        .block__responsible__company
+          〇〇企業
+        .block__responsible__name
+          担当：永沢
+      .block__evaluation
+        .block__evaluation__comments
+          ○件のコメント
+        .block__evaluation__goods
+          ○件のいいね
+    .block
+      .block__head
+        .block__head__title
+          〇〇案件商談
+        .block__head__date
+          〇〇月〇〇日
+      .block__responsible
+        .block__responsible__company
+          〇〇企業
+        .block__responsible__name
+          担当：永沢
+      .block__evaluation
+        .block__evaluation__comments
+          ○件のコメント
+        .block__evaluation__goods
+          ○件のいいね
+  .main__right
+    .title
+      〇〇案件商談
+    .content
+      提案内容
+    .content-contents
+
+    .result
+      結果
+    .result-contents
+.footer
+  〇〇株式会社

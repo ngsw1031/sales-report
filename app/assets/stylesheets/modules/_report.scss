@@ -1,0 +1,62 @@
+.report{
+  width: 800px;
+  height: 100vh;
+  padding: 20px;
+  margin: 0 auto;
+  border: 4px solid;
+  border-color: navy;
+  overflow: auto;
+  .current{
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    border-bottom: 2px solid;
+    border-color: red;
+    &__name{
+      
+    }
+    &__team{
+
+    }
+  }
+  .company{
+    margin-top: 10px;
+    display: flex;
+    font-size: 25px;
+    &__name{
+
+    }
+    a{
+      width: 100%;
+    }
+
+  }
+  .proposal{
+    display: flex;
+    &__amount{
+
+    }
+    &__input{
+
+    }
+  }
+  .proposal-content{
+    &__input{
+
+    }
+  }
+  .result{
+    display: flex;
+    &__amout{
+
+    }
+    &__input{
+
+    }
+  }
+  .result-content{
+    &__input{
+
+    }
+  }
+}
