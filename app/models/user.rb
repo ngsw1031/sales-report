@@ -6,4 +6,5 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   has_many :team_users
   has_many :teams, through: :team_users
+  has_many :reports
 end

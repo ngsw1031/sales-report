@@ -5,27 +5,38 @@
       = current_user.name
     .current__team
       所属：
-      中部支店
-  .company
-    .company__name
-    企業名：
-      %input(type="text" class="company-input")/
-  .proposal
-    .proposal__amount
-      提案金額
-    .propasol__input
-      %input(type="text")/
-  .proposal-content
-    提案内容
-    .proposal-content__input
-      %textarea(name="content" cols="80" rows="10")
-  .result
-    .result__amout
-      獲得金額
-    .result__input
-      %input(type="text")/
-  .result-content
-    提案内容
-    .result-content__input
-      %textarea(name="content" cols="80" rows="10")
-    
+
+  .input
+    = form_with(model: @report) do |f|
+      .report-name
+        .report-name__block
+          標題
+        .report-name__input
+          =f.text_field :report_name
+        .report-name__date
+          =f.text_field :date
+      .company
+        .company__name
+          企業名：
+        .company__input
+          =f.text_field :company
+      .proposal
+        .proposal__amount
+          提案金額：
+        .propasol__input
+          =f.text_field :proposal_amount
+      .proposal-content
+        提案内容
+        .proposal-content__input
+          =f.text_area :proposal_content, size: "80x10"
+      .result
+        .result__amout
+          獲得金額：
+        .result__input
+          =f.text_field :result_amout
+      .result-content
+        結果
+        .result-content__input
+          =f.text_area :result_content, size: "80x10"
+      .report-form
+        = f.submit

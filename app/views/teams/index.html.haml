@@ -1,73 +1,8 @@
 .header
-  .header__left
-    .header__left__block
-      .name
-        = link_to edit_user_path(current_user) do
-          = current_user.name
-      .create-btn
-        = link_to new_report_path(current_user) do
-          レポート作成
-          = icon('fas', 'edit', class: 'icon')
-  .header__right
-    .team
-      名古屋支店
-    %ul.team-menber
-      %li.team-menber__list
-        メンバー：永沢、〇〇、〇〇、〇〇
+  = render "header-left"
+
 .main
-  .main__left
-    .main__left__create
-      = link_to new_team_path(current_user) do
-        新規作成
-        = icon('fas', 'plus', class: 'icon')
-    - current_user.teams.each do |team|
-      .main__left__team-list
-        =link_to "#" do
-          = team.name
+  = render "main-left"
 
-  .main__center
-    .block
-      .block__head
-        .block__head__title
-          〇〇案件商談
-        .block__head__date
-          〇〇月〇〇日
-      .block__responsible
-        .block__responsible__company
-          〇〇企業
-        .block__responsible__name
-          担当：永沢
-      .block__evaluation
-        .block__evaluation__comments
-          ○件のコメント
-        .block__evaluation__goods
-          ○件のいいね
-    .block
-      .block__head
-        .block__head__title
-          〇〇案件商談
-        .block__head__date
-          〇〇月〇〇日
-      .block__responsible
-        .block__responsible__company
-          〇〇企業
-        .block__responsible__name
-          担当：永沢
-      .block__evaluation
-        .block__evaluation__comments
-          ○件のコメント
-        .block__evaluation__goods
-          ○件のいいね
-  .main__right
-    .title
-      〇〇案件商談
-    .content
-      提案内容
-    .content-contents
-
-    .result
-      結果
-    .result-contents
 .footer
   〇〇株式会社
-

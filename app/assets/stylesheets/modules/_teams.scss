@@ -60,6 +60,12 @@
   height: calc( 100vh - 150px - 50px ) ;
   display: flex;
   &__left{
+    border: 1px solid;
+    border-color: navy;
+    width: 250px;
+    color: navy;
+    padding: 15px;
+    overflow: auto;
     &__create{
       border: 2px solid;
       border-color: blue;
@@ -72,12 +78,7 @@
         }
       }
     }
-    border: 1px solid;
-    border-color: navy;
-    width: 250px;
-    color: navy;
-    padding: 15px;
-    overflow: auto;
+    
     &__team-list {
       margin: 30px 0;
       font-size: 25px;
